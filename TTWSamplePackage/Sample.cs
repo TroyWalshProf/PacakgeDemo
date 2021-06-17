@@ -8,5 +8,9 @@ namespace TTWSamplePackage
 {
     public class Sample
     {
+        public static string Hello()
+        {
+            return "World";
+        }
     }
 }
