@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>TTWSamplePackage</id>
-    <version>1.0.0.3-alpha</version>
+    <version>1.0.0.4-alpha</version>
     <authors>ME</authors>
     <copyright>Copyright</copyright>
     <owners>ME</owners>
@@ -16,6 +16,9 @@
     <repository type="git" url="https://github.com/TroyWalshProf/PacakgeDemo" commit="000" />
     <license type="expression">MIT</license>
     <tags>DOTNOTUSE</tags>
+    <dependencies>
+      <group targetFramework="net47" />
+    </dependencies>
   </metadata>
   <files>
     <file src="**/bin/**/TTWSamplePackage.dll" target="lib" />
