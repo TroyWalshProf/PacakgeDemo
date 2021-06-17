@@ -13,7 +13,7 @@
       Stuff
     </description>
     <projectUrl>https://github.com/TroyWalshProf/PacakgeDemo</projectUrl>
-    <repository type="git" url="https://github.com/TroyWalshProf/PacakgeDemo" commit="000" />
+    <repository type="git" url="https://github.com/TroyWalshProf/PacakgeDemo"  />
     <license type="expression">MIT</license>
     <tags>DOTNOTUSE</tags>
     <dependencies>
