@@ -38,9 +38,9 @@ jobs:
         $ns = New-Object System.Xml.XmlNamespaceManager($xml.NameTable)
         $ns.AddNamespace("ns", $xml.DocumentElement.NamespaceURI)
         $element =  $xml.DocumentElement.SelectSingleNode("//ns:repository", $ns)
-        $element.commit = (git rev-parse HEAD).ToString()
-        $xml.Save($filePathToTask)
-        Write-Host (git rev-parse HEAD).ToString()
+        #$element.commit = (git rev-parse HEAD).ToString()
+        #$xml.Save($filePathToTask)
+        #Write-Host (git rev-parse HEAD).ToString()
     - name: Package
       run: nuget pack Sample.nuspec -Symbols -SymbolPackageFormat snupkg
     
