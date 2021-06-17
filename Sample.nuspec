@@ -21,7 +21,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="TTWSamplePackage\bin\Release\net47\TTWSamplePackage.dll" target="lib\net471" />
-    <file src="TTWSamplePackage\bin\Release\net47\TTWSamplePackage.pdb" target="lib\net471" />
+    <file src="TTWSamplePackage\bin\Release\net471\TTWSamplePackage.dll" target="lib\net471" />
+    <file src="TTWSamplePackage\bin\Release\net471\TTWSamplePackage.pdb" target="lib\net471" />
   </files>
 </package>
