@@ -5,6 +5,13 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      version_override:
+        description: 'Version Number'     
+        required: true
+        default: '0.0.0'
+
 
 jobs:
   build:
@@ -34,5 +41,8 @@ jobs:
         $element.commit = (git rev-parse HEAD).ToString()
         $xml.Save($filePathToTask)
         Write-Host (git rev-parse HEAD).ToString()
-    - name: Test
-      run: nuget pack Sample.nuspec
+    - name: Package
+      run: nuget pack Sample.nuspec -Symbols -SymbolPackageFormat snupkg
+      
+    - name: Deploy to nuget
+      run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source https://api.nuget.org/v3/index.json
