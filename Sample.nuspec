@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>TTWSamplePackage</id>
+    <version>1.0-alpha</version>
+    <authors>ME</authors>
+    <copyright>Copyright</copyright>
+    <owners>ME</owners>
+    <title>TTWSamplePackage</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Demo</summary>
+    <description>
+      Stuff
+    </description>
+    <projectUrl>https://github.com/TroyWalshProf/PacakgeDemo</projectUrl>
+    <repository type="git" url="https://github.com/TroyWalshProf/PacakgeDemo" commit="000" />
+    <license type="expression">MIT</license>
+    <tags>DOTNOTUSE</tags>
+  </metadata>
+  <files>
+    <file src="**/TTWSamplePackage.dll" target="lib" />
+    <file src="**/TTWSamplePackage.pdb" target="lib" />
+  </files>
+</package>
