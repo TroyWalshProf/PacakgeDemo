@@ -43,6 +43,15 @@ jobs:
         Write-Host (git rev-parse HEAD).ToString()
     - name: Package
       run: nuget pack Sample.nuspec -Symbols -SymbolPackageFormat snupkg
-      
+    
+    - uses: actions/upload-artifact@v2
+      if: always()
+      name: "Upload NuGet packages artifact"
+      with:
+        name: packages
+        path: |
+          **/*.nupkg
+          **/*.snupkg
+    
     - name: Deploy to nuget
       run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source https://api.nuget.org/v3/index.json
